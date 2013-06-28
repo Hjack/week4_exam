@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Week</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <h1></h1>
+    <div class="container">
+    <div class="row">
+      <form class="form-search">
+        <input type="text" class="input-medium search-query">
+        <button type="submit" class="submit btn">Submit</button>
+      </form>
+      <div class="tweet span6">
+        <p>Click Submit to load tweets</p>
+         <p class="tweets">@John Doe Today is Friday. Yay</p><button type="submit" class="btn" id="button1">Favorite</button>
+        <p class="tweets">@PDX_Joe this weekend is suppose to be hot.</p><button type="submit" class="btn"id="button2">Favorite</button>
+        <p class="tweets">@SOSO I'm working on my test and it is hard!!</p><button type="submit" class="btn"id="button3">Favorite</button>
+    </div>
+      
+      <form class="form-search">
+        <input type="text" class="input-medium search-query">
+        <button type="submit" class="favorite btn">Favorite</button>
+      </form>
+      <div class="favorite span6">
+        <!-- <p>Below are your favorite tweets</p> -->
+        <div class="destination">
+            
+          </div>
+      </div>      
+      </div>
+       </div>
+      
+    
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.tweets').hide();
+        $('button#button1').hide();
+        $('button#button2').hide();
+        $('button#button3').hide();
+        $('button.submit').on('click',function(){
+            $('.tweets').show();
+            $('button#button1').show();
+            $('button#button2').show();
+            $('button#button3').show();
+              return false;
+              $('button#button1').on('click',function(){
+                  // var $tweetMessage = $('p.tweets').get();
+                  // $(this).append('.destination')
+                  // $('<p>@JohnDoe</p>').add('.destination');
+                  $('.destination').prependTo('<p>@JohnDoe</p>')
+
+              });
+        });
+      });
+
+
+
+
+    </script>
+   
+
+  </body>
+</html>
+
